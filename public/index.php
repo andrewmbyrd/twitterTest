@@ -1,5 +1,6 @@
 <?php require_once('../private/initialize.php' );
-  $tweets=array();
+  $tweets_query = "SELECT content FROM tweets ";
+  $tweets = mysqli_query($db, $tweets_query);
 ?>
 
 <!DOCTYPE html>
@@ -23,13 +24,15 @@
         </form>
         <?php
           if (isPostRequest()){
-            $tweets[]= $_POST['tweet-content'];
-            foreach ($tweets as $tweet) {
-              echo "$tweet <br />";
+            while($tweet = mysqli_fetch_assoc($tweets)){
+              echo $tweet['content'];
             }
           }
         ?>
       </div>
+      <?php
+        mysqli_free_result($tweets);
+      ?>
       <div class="info">
         <h3 class="neat-contained">User Info</h3>
       </div>
@@ -39,3 +42,7 @@
     <h3>&copy; <?php echo date('Y'); ?> Tweeter<h3>
   </footer>
 </html>
+
+<?php
+  dbDisconnect($db);
+?>

@@ -106,4 +106,10 @@ h1{
   float: left;
   background: rgb(25, 185, 255);
   min-height: 20vh;
+
+}
+
+.info p{
+  text-align: center;
+  font-weight: bold;
 }

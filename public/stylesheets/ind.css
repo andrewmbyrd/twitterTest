@@ -1,0 +1,109 @@
+
+body{
+  background-image: url('../images/retro-squares-000505-light-sky-blue.jpg');
+  height: 100vh;
+}
+
+.centered{
+  width: 63%;
+  margin: 0 auto;
+  position: relative;
+}
+
+h1{
+  color: blue;
+  text-shadow: 3px 3px  white;
+  font-family: Courier serif;;
+}
+.logo{
+  padding-left: 1rem;
+  height: 3rem;
+  width: auto;
+}
+.neat-contained{
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.main-content{
+  min-height: 90vh;
+}
+
+.greeting{
+  font-family: Palatino serif;;
+  font-size: x-large;
+
+}
+
+
+.feed{
+  background: white;
+  width: 80%;
+  float: left;
+  min-height: 90vh;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.chars{
+  color: lightgray;
+  font-size: x-large;
+  position: absolute;
+  top: 0.3rem;
+  right: 3rem;
+}
+
+#textbox{
+  width: 100%;
+  height: 4rem;
+}
+
+.tweet-button{
+  border-radius: 5px;
+  margin-top: 1em;
+  height: 2rem;
+  text-align: center;
+  width: 20%;
+  float: right;
+}
+
+.tweet-button:hover{
+  cursor:pointer;
+}
+
+.avatar{
+  height:3rem;
+  width: auto;
+  float: left;
+}
+
+.content{
+  width: 100%;
+}
+
+.tweet{
+  border-bottom: 1px solid rgb(205,210,210);
+  height: 100px;
+}
+
+.tweet .message{
+  padding-left: 5px;
+  font-size: large;
+  text-align: justify;
+  height: 2rem;
+}
+
+.tweet:hover{
+  background-color: rgb(232, 242, 247);
+}
+
+.time{
+  color: rgb(150, 150, 150);
+  font-size: small;
+}
+.info{
+  width: 20%;
+  float: left;
+  background: rgb(25, 185, 255);
+  min-height: 20vh;
+}

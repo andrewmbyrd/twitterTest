@@ -33,7 +33,7 @@
     global $db;
     //need to prevent injection here
     $tweets_query = "SELECT * FROM tweets ";
-    $tweets_query .= "ORDER BY time_stamp DESC ";
+    $tweets_query .= "ORDER BY time_stamp DESC LIMIT 15 ";
     $tweets = mysqli_query($db, $tweets_query);
 
     hanlde_potential_connection_failure();
@@ -41,5 +41,17 @@
     return $tweets;
   }
 
+  function num_tweets(){
+    global $db;
+    $sql = "SELECT count(*) FROM tweets";
+    $result = mysqli_query($db, $sql);
+    hanlde_potential_connection_failure();
+    $num = mysqli_fetch_assoc($result)['count(*)'];
+
+    mysqli_free_result($result);
+
+    return $num;
+
+  }
   addTweet();
 ?>
